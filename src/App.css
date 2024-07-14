@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Luciole";
+    src: url("../public/fonts/Luciole/Luciole-Regular.ttf") format("truetype");
+}
+
+:root.light {
+    
+    --text-color-main: 52, 42, 52;
+    --text-color-main-reverse: 242, 242, 242;
+
+    --background-color-0: 209, 236, 255;
+    --background-color-1: 179, 223, 255;
+    --background-color-2: 164, 216, 253;
+    --background-color-3: 144, 202, 249;
+}
+
+:root.dark {
+    
+    --text-color-main: 242, 242, 242;
+    --text-color-main-reverse: 52, 42, 52;
+    
+    --background-color-0: 25, 118, 210;
+    --background-color-1: 21, 93, 181;
+    --background-color-2: 14, 82, 150;
+    --background-color-3: 13, 71, 161;
+}
+
+
+* {
+    font-family: "Luciole", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    color: rgb(var(--text-color-main));
+    
+}

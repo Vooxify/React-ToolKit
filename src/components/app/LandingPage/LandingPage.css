@@ -1,0 +1,123 @@
+#top-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(var(--background-color-0)), rgb(var(--background-color-3)));
+}
+
+.page-logo {
+    /* Ajouter ici le logo react à gauche (comme edp) */
+}
+
+.navigation-bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellow; */
+    padding: 0 20px; /* Ajoutez du padding pour un espacement interne */
+}
+
+.piece {
+    display: flex;
+    background-color: rgb(var(--background-color-1));
+    border-radius: 9999px;
+    padding: 10px 20px;
+    gap: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.piece a {
+    text-decoration: none;
+    transition: all .3s ease;
+    padding: 3px 20px;
+    border-radius: 9999px;
+}
+
+.piece a:hover {
+    background-color: rgb(var(--background-color-3));
+    color: rgb(var(--text-color-main-reverse));
+}
+
+.other-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espace entre les autres liens */
+}
+
+.change-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.change-theme button {
+    margin-right: 2rem;
+    
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.landing-page .change-theme button {
+    /* Style the theme button */
+    position: relative;
+    display: flex;
+    background-color: rgb(var(--background-color-1));
+    border: 0;
+    cursor: pointer;
+}
+
+.landing-page .change-theme button::before,
+.landing-page .change-theme button::after {
+    /* Style the theme button's pseudo-elements */
+    position: absolute;
+    
+    content: "";
+    border-radius: 100%;
+    width: 23px;
+    height: 23px;
+    transition: all 0.2s ease-in;
+}
+
+.landing-page .change-theme button::before {
+    /* Style the theme button's before pseudo-element */
+    display: none;
+    background-color: rgba(190, 190, 200, 0.5);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(200, 200, 210, 0.7), transparent 30%),
+        radial-gradient(circle at 30% 70%, rgba(180, 180, 190, 0.7), transparent 30%),
+        radial-gradient(circle at 70% 40%, rgba(210, 210, 220, 0.7), transparent 30%),
+        radial-gradient(circle at 20% 60%, rgba(190, 190, 200, 0.7), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(170, 170, 180, 0.7), transparent 30%);
+    box-shadow: 1px 0 4px rgb(0, 0, 0);
+}
+
+.landing-page .change-theme button::after {
+    /* Style the theme button's after pseudo-element */
+    display: block;
+    background-color: rgba(255, 200, 80, 0.5);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 200, 80, 0.7), transparent 30%),
+        radial-gradient(circle at 30% 70%, rgba(255, 180, 60, 0.315), transparent 30%),
+        radial-gradient(circle at 70% 40%, rgba(255, 220, 100, 0.7), transparent 30%),
+        radial-gradient(circle at 20% 60%, rgba(255, 190, 90, 0.7), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(255, 210, 70, 0.7), transparent 30%);
+    box-shadow: 0 0 0 1px rgb(255, 200, 80), 0 0 5px 0px rgb(255, 200, 80);
+}
+
+.dark .landing-page .change-theme button::before {
+    /* Style the theme button's before pseudo-element in dark mode */
+    display: block;
+}
+
+.dark .landing-page .change-theme button::after {
+    /* Style the theme button's after pseudo-element in dark mode */
+    display: none;
+}
